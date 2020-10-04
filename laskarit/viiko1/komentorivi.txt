@@ -1,0 +1,7 @@
+user-MacBook-Pro:ot_harjoitustyo user$ tree
+.
+├── README.md
+└── laskarit
+    └── viiko1
+
+2 directories, 1 file

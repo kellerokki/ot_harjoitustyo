@@ -1,0 +1,126 @@
+user-MacBook-Pro:tiedostoja user$ git restore --staged file3
+user-MacBook-Pro:tiedostoja user$ git checkout -- file3
+user-MacBook-Pro:tiedostoja user$ git status
+On branch master
+nothing to commit, working tree clean
+user-MacBook-Pro:tiedostoja user$ git rm file1
+rm 'tiedostoja/file1'
+user-MacBook-Pro:tiedostoja user$ git mv file2 file22
+user-MacBook-Pro:tiedostoja user$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file2
+        renamed:    file1 -> file22
+
+user-MacBook-Pro:tiedostoja user$ git commit -m "poisto ja nimen muutos"
+[master f5fff37] poisto ja nimen muutos
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 tiedostoja/file2
+ rename tiedostoja/{file1 => file22} (100%)
+user-MacBook-Pro:tiedostoja user$ git log --stat | cat
+commit f5fff37c62f4105b545c29a8dba90b13606dffce
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 23:02:09 2020 +0300
+
+    poisto ja nimen muutos
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 50a6e3d15654ee39f3c2d6e4c986a2ff5ff716e4
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:55:52 2020 +0300
+
+    luotu tiedostoja/
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 7ded58937fd8a56b0d9eea0fcca27dc9eb9a5277
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:33:37 2020 +0300
+
+    muutoksia komennolla git add -p
+
+ eka.txt    | 1 +
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit c0d8ee0b49a3e2de7088ee41c92aeef381d5669e
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:31:18 2020 +0300
+
+    uusi nimi
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 24eef4254be2c2b351fc619bf453cb0c1fc09ed1
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:28:36 2020 +0300
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 13e90fff26c2f26e8bda881797c12e6937a56112
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:27:15 2020 +0300
+
+    muutoksia
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit cca12b2dd9f89e0d7e4ff13ed3deae2cac7c49c4
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:25:30 2020 +0300
+
+    lisätty tekstiä
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit d5fe256ae00bfe924db52fb46f8f418452689e88
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:18:41 2020 +0300
+
+    muokkauksia ja luotu stuff/
+
+ kolmas.txt        | 1 +
+ stuff/tavaraa.txt | 0
+ toinen.txt        | 1 +
+ 3 files changed, 2 insertions(+)
+
+commit 48f1fb75139c394ba6c76aadaf1d7d757c2e6599
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:14:23 2020 +0300
+
+    luotu kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 2812c500a5dcde23e235be7ac289e7972f008581
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:11:47 2020 +0300
+
+    muutos tiedosto.txt ja luotu toinen.txt
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 63e80cb125aa80f3ddfd88af0ac2f4f334aa45b1
+Author: kellerokki <rolle.kekki@protonmail.com>
+Date:   Sun Oct 4 22:08:54 2020 +0300
+
+    luotu tiedosto.txt
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
